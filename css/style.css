@@ -71,9 +71,9 @@
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 5px #00ffff; }
+      0% { box-shadow: 0 0 10px #00ffff; }
       50% { box-shadow: 0 0 20px #00ffff; }
-      100% { box-shadow: 0 0 5px #00ffff; }
+      100% { box-shadow: 0 0 10px #00ffff; }
     }
 
     .part:hover {
@@ -81,7 +81,7 @@
     }
 
     #info {
-      margin-top: 20px;
+      margin-bottom: 20px;
       padding: 20px;
       background: rgba(0,0,0,0.6);
       border: 1px solid #00ffcc;
