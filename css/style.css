@@ -81,7 +81,7 @@
       transform: scale(1.2);
     }
 
-    #svg-linha {
+    svg {
        position: absolute;
        top: 0;
        left: 0;
