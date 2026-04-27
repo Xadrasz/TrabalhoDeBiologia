@@ -1,4 +1,4 @@
-let timeoutAtual = null; // guarda a referência do timeout em andamento
+    let timeoutAtual = null; // guarda a referência do timeout em andamento
 
     function escrever(texto, velocidade = 60) {
       // Cancela qualquer digitação em andamento
