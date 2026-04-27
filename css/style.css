@@ -5,6 +5,7 @@
       color: #00ffcc;
       text-align: center;
       overflow-x: hidden;
+      min-height: 100vh;
     }
 
     header {
