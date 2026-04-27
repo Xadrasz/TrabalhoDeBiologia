@@ -67,9 +67,9 @@
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 5px #00ffcc; }
-      50% { box-shadow: 0 0 20px #00ffcc; }
-      100% { box-shadow: 0 0 5px #00ffcc; }
+      0% { box-shadow: 0 0 5px #00ffff; }
+      50% { box-shadow: 0 0 20px #00ffff; }
+      100% { box-shadow: 0 0 5px #00ffff; }
     }
 
     .part:hover {
@@ -87,7 +87,6 @@
       min-height: 100px;
       box-shadow: 0 0 20px #00ffcc;
       transition: all 0.4s ease;
-      opacity: 1;
     }
 
     /* Fundo animado */
