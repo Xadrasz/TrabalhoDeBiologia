@@ -1,6 +1,6 @@
 document.querySelectorAll('.part').forEach(botao => {
   botao.addEventListener('click', function() {
-    const caixa = document.getElementById('minha-caixa').getBoundingClientRect();
+    const caixa = document.getElementById('info').getBoundingClientRect();
     const btn = this.getBoundingClientRect(); // pega o botão clicado
 
     const x1 = btn.left + btn.width / 2;
