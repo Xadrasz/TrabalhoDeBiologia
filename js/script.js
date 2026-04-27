@@ -1,43 +1,49 @@
   const info = document.getElementById("info");
 
-function escreverTexto(texto) {
-  info.classList.add("show");
-  info.innerHTML = "";
-
+function typeWriter(texto, elementoId, velocidade = 50) {
+  return new Promise((resolve) => {
+    const elemento = document.getElementById(elementoId);
     let i = 0;
 
-  function digitar() {
-    if (i < texto.length) {
-      info.innerHTML += texto.charAt(i);
-      i++;
-      setTimeout(digitar, 30); // velocidade (menor = mais rápido)
+    function digitar() {
+      if (i < texto.length) {
+        elemento.textContent += texto[i++];
+        setTimeout(digitar, velocidade);
+      } else {
+        resolve(); // avisa que terminou
+      }
     }
-  }
 
-  digitar();
+    digitar();
+  });
 }
 
-function mostrarTexto(tipo) {
+async function iniciar() {
+  await typeWriter("Primeira frase...", "texto", 60);
+  await typeWriter(" Segunda frase!", "texto", 60);
+};
+
+async function mostrarTexto(tipo) {
   if (tipo === "geral") {
-    escreverTexto("Os cloroplastos são organelas responsáveis pela fotossíntese.");
+   await typeWriter("Os cloroplastos são organelas responsáveis pela fotossíntese.", "texto", 60);
   }
   if (tipo === "funcao") {
-    escreverTexto("Eles transformam luz em energia química (glicose).");
+   await typeWriter("Eles transformam luz em energia química (glicose).", "texto", 60);
   }
   if (tipo === "curiosidade") {
-    escreverTexto("Possuem DNA próprio — evidência da endossimbiose!");
+   await typeWriter("Possuem DNA próprio — evidência da endossimbiose.", "texto", 60);
   }
 }
 
 function mostrarParte(parte) {
   if (parte === "tilacoide") {
-    escreverTexto("Tilacoides: onde ocorre a fase luminosa.");
+    await typeWriter("Tilacoides: onde ocorre a fase luminosa.", "texto", 50);
   }
   if (parte === "estroma") {
-    escreverTexto("Estroma: onde ocorre o ciclo de Calvin.");
+    await typeWriter("Estroma: onde ocorre o ciclo de Calvin.", "texto", 50);
   }
   if (parte === "membrana") {
-    escreverTexto("Membrana: controla entrada e saída.");
+    await typeWriter("Membrana: controla entrada e saída.", "texto", 50);
   }
 }
 
