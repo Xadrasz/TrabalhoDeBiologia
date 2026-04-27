@@ -1,4 +1,3 @@
-  const info = document.getElementById("info");
 let timeoutAtual = null; // guarda a referência do timeout em andamento
 
     function escrever(texto, velocidade = 60) {
@@ -8,7 +7,7 @@ let timeoutAtual = null; // guarda a referência do timeout em andamento
         timeoutAtual = null;
       }
 
-      const elemento = document.getElementById("texto");
+      const elemento = document.getElementById("info");
       elemento.textContent = ""; // limpa o texto anterior
       let i = 0;
 
