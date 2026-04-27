@@ -26,25 +26,25 @@ let timeoutAtual = null; // guarda a referência do timeout em andamento
 
 function mostrarTexto(tipo) {
   if (tipo === "geral") {
-   escrever("Os cloroplastos são organelas responsáveis pela fotossíntese.", "texto", 60);
+   escrever("Os cloroplastos são organelas responsáveis pela fotossíntese.", 60);
   }
   if (tipo === "funcao") {
-   escrever("Eles transformam luz em energia química (glicose).", "texto", 60);
+   escrever("Eles transformam luz em energia química (glicose).", 60);
   }
   if (tipo === "curiosidade") {
-   escrever("Possuem DNA próprio — evidência da endossimbiose.", "texto", 60);
+   escrever("Possuem DNA próprio — evidência da endossimbiose.", 60);
   }
 }
 
 function mostrarParte(parte) {
   if (parte === "tilacoide") {
-    await typeWriter("Tilacoides: onde ocorre a fase luminosa.", "texto", 50);
+    await typeWriter("Tilacoides: onde ocorre a fase luminosa.", 50);
   }
   if (parte === "estroma") {
-    await typeWriter("Estroma: onde ocorre o ciclo de Calvin.", "texto", 50);
+    await typeWriter("Estroma: onde ocorre o ciclo de Calvin.", 50);
   }
   if (parte === "membrana") {
-    await typeWriter("Membrana: controla entrada e saída.", "texto", 50);
+    await typeWriter("Membrana: controla entrada e saída.", 50);
   }
 }
 
