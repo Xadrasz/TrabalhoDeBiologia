@@ -1,6 +1,6 @@
    @font-face {
     font-family: 'VCR';
-    src: url('./VCR-mono.ttf') format('ttf');
+    src: url('css/VCR-mono.ttf') format('ttf');
 }
    body {
       margin: 0;
