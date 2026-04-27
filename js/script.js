@@ -24,30 +24,6 @@ let timeoutAtual = null; // guarda a referência do timeout em andamento
       digitar();
     }
 
-function mostrarTexto(tipo) {
-  if (tipo === "geral") {
-   escrever("Os cloroplastos são organelas responsáveis pela fotossíntese.", 60);
-  }
-  if (tipo === "funcao") {
-   escrever("Eles transformam luz em energia química (glicose).", 60);
-  }
-  if (tipo === "curiosidade") {
-   escrever("Possuem DNA próprio — evidência da endossimbiose.", 60);
-  }
-}
-
-function mostrarParte(parte) {
-  if (parte === "tilacoide") {
-    await typeWriter("Tilacoides: onde ocorre a fase luminosa.", 50);
-  }
-  if (parte === "estroma") {
-    await typeWriter("Estroma: onde ocorre o ciclo de Calvin.", 50);
-  }
-  if (parte === "membrana") {
-    await typeWriter("Membrana: controla entrada e saída.", 50);
-  }
-}
-
   // Criar estrelas animadas
   const stars = document.getElementById("stars");
   for (let i = 0; i < 60; i++) {
