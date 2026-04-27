@@ -1,18 +1,19 @@
 document.querySelectorAll('.part').forEach(botao => {
   botao.addEventListener('click', function() {
-    const caixa = document.getElementById('info').getBoundingClientRect();
-    const btn = this.getBoundingClientRect(); // pega o botão clicado
+    escrever(this.dataset.texto); // veja abaixo
 
+    const caixa = document.getElementById('info').getBoundingClientRect();
+    const btn = this.getBoundingClientRect();
     const x1 = btn.left + btn.width / 2;
     const y1 = btn.bottom;
     const y2 = caixa.top;
-
-    const comprimento = Math.hypot(x1, y2 - y1);
+    const comprimento = Math.abs(y2 - y1);
 
     const svg = document.getElementById('svg-linha');
     svg.innerHTML = `
       <line x1="${x1}" y1="${y1}" x2="${x1}" y2="${y2}"
-        stroke="white" stroke-width="2"
+        stroke="#00ffcc"
+        stroke-width="2"
         stroke-dasharray="${comprimento}"
         stroke-dashoffset="${comprimento}"
         style="animation: desenhar 0.8s ease forwards"
