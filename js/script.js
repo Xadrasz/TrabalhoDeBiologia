@@ -27,7 +27,7 @@ document.querySelectorAll('.part').forEach(botao => {
 
     let timeoutAtual = null; // guarda a referência do timeout em andamento
 
-    function escrever(texto, velocidade = 100, limparLinha = true) {
+    function escrever(texto, velocidade = 40, limparLinha = true) {
       // Cancela qualquer digitação em andamento
       if (timeoutAtual) {
         clearTimeout(timeoutAtual);
