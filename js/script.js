@@ -1,6 +1,5 @@
 document.querySelectorAll('.part').forEach(botao => {
   botao.addEventListener('click', function() {
-
     const caixa = document.getElementById('info').getBoundingClientRect();
     const btn = this.getBoundingClientRect();
     const x1 = btn.left + btn.width / 2;
@@ -11,25 +10,20 @@ document.querySelectorAll('.part').forEach(botao => {
     const svg = document.getElementById('svg-linha');
     svg.innerHTML = `
       <line x1="${x1}" y1="${y1}" x2="${x1}" y2="${y2}"
-        stroke="white"
+        stroke="#00ffcc"
         stroke-width="2"
         stroke-dasharray="${comprimento}"
         stroke-dashoffset="${comprimento}"
         style="animation: desenhar 0.8s ease forwards"
       />
     `;
-    wait(800)
-    escrever(this.dataset.texto);
+
+    // Espera a linha terminar antes de escrever
+    setTimeout(() => {
+      escrever(this.dataset.texto);
+    }, 800); // mesmo tempo da animação
   });
 });
-    function wait(ms) {
-    return new Promise((resolve, reject) => {
-        if (typeof ms !== 'number' || ms < 0) {
-            return reject(new Error("Invalid time: must be a non-negative number."));
-        }
-        setTimeout(resolve, ms);
-      });
-    }
 
     let timeoutAtual = null; // guarda a referência do timeout em andamento
 
