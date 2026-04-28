@@ -12,7 +12,7 @@ document.querySelectorAll('.part').forEach(botao => {
     const svg = document.getElementById('svg-linha');
     svg.innerHTML = `
       <line x1="${x1}" y1="${y1}" x2="${x1}" y2="${y2}"
-        stroke="#00ffcc"
+        stroke="white"
         stroke-width="2"
         stroke-dasharray="${comprimento}"
         stroke-dashoffset="${comprimento}"
