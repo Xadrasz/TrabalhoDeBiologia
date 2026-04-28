@@ -67,14 +67,15 @@
     .part {
       position: absolute;
       border-radius: 50%;
+      border: 2px solid white;
       cursor: pointer;
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 10px #00ffff; }
-      50% { box-shadow: 0 0 20px #00ffff; }
-      100% { box-shadow: 0 0 10px #00ffff; }
+      0% { box-shadow: 0 0 10px white; }
+      50% { box-shadow: 0 0 20px white; }
+      100% { box-shadow: 0 0 10px white; }
     }
     
     .part:hover {
