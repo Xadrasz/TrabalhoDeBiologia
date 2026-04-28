@@ -30,7 +30,9 @@ document.querySelectorAll('.part').forEach(botao => {
         clearTimeout(timeoutAtual);
         timeoutAtual = null;
       }
-
+      
+      document.getElementById('svg-linha').innerHTML = '';
+      
       const elemento = document.getElementById("info");
       elemento.textContent = ""; // limpa o texto anterior
       let i = 0;
