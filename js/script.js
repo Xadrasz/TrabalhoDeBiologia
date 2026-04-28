@@ -20,21 +20,23 @@ document.querySelectorAll('.part').forEach(botao => {
 
     // Espera a linha terminar antes de escrever
     setTimeout(() => {
-      escrever(this.dataset.texto);
+      escrever(this.dataset.texto, 100, false);
     }, 800); // mesmo tempo da animação
   });
 });
 
     let timeoutAtual = null; // guarda a referência do timeout em andamento
 
-    function escrever(texto, velocidade = 60) {
+    function escrever(texto, velocidade = 100, limparLinha = true) {
       // Cancela qualquer digitação em andamento
       if (timeoutAtual) {
         clearTimeout(timeoutAtual);
         timeoutAtual = null;
       }
-      
-      document.getElementById('svg-linha').innerHTML = '';
+
+      if (limparLinha) {
+        document.getElementById('svg-linha').innerHTML = '';
+      }
       
       const elemento = document.getElementById("info");
       elemento.textContent = ""; // limpa o texto anterior
