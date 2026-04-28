@@ -1,6 +1,5 @@
 document.querySelectorAll('.part').forEach(botao => {
   botao.addEventListener('click', function() {
-    escrever(this.dataset.texto); // veja abaixo
 
     const caixa = document.getElementById('info').getBoundingClientRect();
     const btn = this.getBoundingClientRect();
@@ -19,8 +18,18 @@ document.querySelectorAll('.part').forEach(botao => {
         style="animation: desenhar 0.8s ease forwards"
       />
     `;
+    wait(800)
+    escrever(this.dataset.texto);
   });
 });
+    function wait(ms) {
+    return new Promise((resolve, reject) => {
+        if (typeof ms !== 'number' || ms < 0) {
+            return reject(new Error("Invalid time: must be a non-negative number."));
+        }
+        setTimeout(resolve, ms);
+      });
+    }
 
     let timeoutAtual = null; // guarda a referência do timeout em andamento
 
