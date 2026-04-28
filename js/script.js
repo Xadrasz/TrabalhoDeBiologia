@@ -20,7 +20,7 @@ document.querySelectorAll('.part').forEach(botao => {
 
     // Espera a linha terminar antes de escrever
     setTimeout(() => {
-      escrever(this.dataset.texto, 100, false);
+      escrever(this.dataset.texto, 40, false);
     }, 800); // mesmo tempo da animação
   });
 });
